@@ -11,7 +11,7 @@ module Ebay
     class ClientCredentialsGrant
       include Requestable
 
-      self.endpoint = 'https://api.ebay.com/identity/v1/oauth2/token'
+      self.endpoint = 'https://api.sandbox.ebay.com/identity/v1/oauth2/token'
 
       # @return [String]
       attr_reader :app_id
@@ -45,7 +45,7 @@ module Ebay
 
       def payload
         { grant_type: 'client_credentials',
-          scope: 'https://api.ebay.com/oauth/api_scope' }
+          scope: 'https://api.sandbox.ebay.com/oauth/api_scope' }
       end
     end
   end
